@@ -1,7 +1,6 @@
 """A01 验收测试：ThreadState reducer + 最小状态图。"""
 
 import pytest
-from langchain_core.messages import AIMessage
 
 from deerflow_harness.lead_agent import make_lead_agent
 from deerflow_harness.thread_state import (

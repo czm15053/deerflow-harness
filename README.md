@@ -17,7 +17,8 @@
 
 ## 文章目录
 
-见 [`docs/`](./docs)，第 00 篇为导论。完整目录随系列推进更新。
+见 [`docs/`](./docs)，第 00 篇为导论。  
+完整学习路线与代码对照请看 [`docs/SERIES-MAP.md`](./docs/SERIES-MAP.md)。
 
 ## 运行
 

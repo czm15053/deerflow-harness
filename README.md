@@ -27,7 +27,24 @@ uv sync
 uv run pytest -q
 ```
 
+## 版本与归档
+
+本仓库采用**双版本**机制：
+
+- **根目录**（`deerflow-harness/`）：最新开发版本，继续承载 A03+ 的代码演进。
+- **`archive/` 目录**：每篇文章结束时的**独立可运行快照**，完整保存该篇的代码、测试与文档。
+
+### 当前归档
+
+| 归档 | 主题 | 测试数 | 运行方式（从仓库根目录执行） |
+|------|------|--------|------------------------------|
+| `archive/a00-overview/` | 导论（无代码） | 1 passed | `PYTHONPATH=archive/a00-overview/src uv run pytest archive/a00-overview/tests -q` |
+| `archive/a01-state-graph/` | ThreadState + 最小图 | 9 passed | `PYTHONPATH=archive/a01-state-graph/src uv run pytest archive/a01-state-graph/tests -q` |
+| `archive/a02-lead-agent/` | LeadAgent 工厂 | 20 passed | `PYTHONPATH=archive/a02-lead-agent/src uv run pytest archive/a02-lead-agent/tests -q` |
+
+每个归档都是**结构独立**的项目（有自己的 `pyproject.toml`、`src/`、`tests/`、`docs/`），但为了节省空间，所有归档共享根目录的 `.venv`，通过 `PYTHONPATH` 指向对应归档的 `src/` 来运行测试。
+
 ## 状态
 
-- 系列：第 00 篇（导论）已就位。
+- 系列：第 00–02 篇已就位，A03+ 逐步推进中。
 - 代码：随每篇逐层加入。
